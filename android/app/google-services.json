@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585486069052",
+    "project_id": "car-wash-app-leaport",
+    "storage_bucket": "car-wash-app-leaport.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585486069052:android:87e211c439202c12910239",
+        "android_client_info": {
+          "package_name": "com.example.car_wash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTwhpCUzdVrObdnBEeJxOPtUgbeTnVP-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

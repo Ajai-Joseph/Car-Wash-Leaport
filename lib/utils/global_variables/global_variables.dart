@@ -1,0 +1,2 @@
+String? authUrl;
+String? appUsageDataUrl;
