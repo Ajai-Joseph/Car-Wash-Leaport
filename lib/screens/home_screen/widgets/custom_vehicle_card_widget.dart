@@ -12,13 +12,13 @@ class CustomVehicleCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(padding: EdgeInsets.all(5),
+    return Container(padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         title: Text(
           vehicle["type"],
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +26,7 @@ class CustomVehicleCardWidget extends StatelessWidget {
             Text("Quality: ${vehicle["quality"]}"),
             Row(
               children: [
-                Text("Payment status: "),
+                const Text("Payment status: "),
                 CustomPaymentStatusWidget(isPaid: vehicle["paid"])
               ],
             ),

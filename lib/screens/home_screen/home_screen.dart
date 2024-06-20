@@ -1,16 +1,13 @@
 import 'package:car_wash/config/config.dart';
-import 'package:car_wash/controller/app_controller/app_controller.dart';
-import 'package:car_wash/controller/garage_controller/garage_controller.dart';
 import 'package:car_wash/controller/home_controller/home_controller.dart';
-import 'package:car_wash/screens/add_vehicle_screen/add_vehicle_screen.dart';
-import 'package:car_wash/screens/home_screen/widgets/custom_payment_status_widget.dart';
 import 'package:car_wash/screens/home_screen/widgets/custom_vehicle_card_widget.dart';
-import 'package:car_wash/screens/payment_screen/payment_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends GetWidget<HomeController> {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +29,13 @@ class HomeScreen extends GetWidget<HomeController> {
             },
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem<String>(
+                const PopupMenuItem<String>(
                   value: 'wallet',
-                  child: const Text('Wallet'),
+                  child: Text('Wallet'),
                 ),
-                PopupMenuItem<String>(
+                const PopupMenuItem<String>(
                   value: 'logout',
-                  child: const Text('Logout'),
+                  child: Text('Logout'),
                 )
               ];
             },
@@ -77,20 +74,20 @@ class HomeScreen extends GetWidget<HomeController> {
                                         vehicle: vehicle));
                               },
                               separatorBuilder: (context, index) {
-                                return SizedBox(height: 15);
+                                return const SizedBox(height: 15);
                               },
                             );
                           }
                         }
-                        return Center(
+                        return const Center(
                           child: Text('No vehicles added'),
                         );
                       } else if (snapshot.hasError) {
-                        return Center(
+                        return const Center(
                           child: Text('Something went wrong'),
                         );
                       } else {
-                        return Center(
+                        return const Center(
                           child: CircularProgressIndicator(),
                         );
                       }
@@ -100,7 +97,7 @@ class HomeScreen extends GetWidget<HomeController> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: controller.navigateToAddVehiclePage,
-        child: Icon(
+        child: const Icon(
           Icons.add,
           size: 30,
         ),

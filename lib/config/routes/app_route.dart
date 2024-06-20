@@ -21,19 +21,19 @@ class AppRoute {
         binding: SplashBinding()),
     GetPage(
         name: routeName.loginScreen,
-        page: () => LoginScreen(),
+        page: () => const LoginScreen(),
         binding: LoginBinding()),
     GetPage(
         name: routeName.homeScreen,
-        page: () => HomeScreen(),
+        page: () => const HomeScreen(),
         binding: HomeBinding()),
     GetPage(
         name: routeName.registerScreen,
-        page: () => RegisterScreen(),
+        page: () => const RegisterScreen(),
         binding: RegisterBinding()),
     GetPage(
         name: routeName.addVehicleScreen,
-        page: () => AddVehicleScreen(),
+        page: () => const AddVehicleScreen(),
         binding: AddVehicleBinding()),
     GetPage(
         name: routeName.paymentScreen,

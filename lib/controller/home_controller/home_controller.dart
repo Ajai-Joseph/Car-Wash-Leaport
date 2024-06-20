@@ -27,9 +27,9 @@ class HomeController extends GetxController {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: const Text(
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Text(
                   'Your Wallet Balance:',
                   style: TextStyle(
                     //color: Colors.purple,
@@ -46,7 +46,7 @@ class HomeController extends GetxController {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -60,7 +60,7 @@ class HomeController extends GetxController {
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 15),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Go Back',
                       style: TextStyle(

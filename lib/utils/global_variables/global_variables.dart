@@ -1,2 +1,0 @@
-String? authUrl;
-String? appUsageDataUrl;

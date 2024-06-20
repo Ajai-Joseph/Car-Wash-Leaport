@@ -14,12 +14,12 @@ class PaymentScreen extends GetWidget<PaymentController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Payment",
           style: TextStyle(color: Colors.white),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Get.back();
           },
@@ -27,34 +27,34 @@ class PaymentScreen extends GetWidget<PaymentController> {
         backgroundColor: Colors.purple,
       ),
       body: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Proceed to pay for the vehicle:",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 "Vehicle: ${vehicle["type"]}",
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 "Quality: ${vehicle["quality"]}",
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 "Cost: Rs. ${vehicle["cost"]}",
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Text(
                 "Wallet Balance: Rs. ${appController.currentUserModel!.walletBalance}",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
               ),
             ],
           ),
@@ -66,11 +66,11 @@ class PaymentScreen extends GetWidget<PaymentController> {
               appController.currentUserModel!.walletBalance!, vehicle.id);
         },
         child: Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             height: 50,
             decoration: BoxDecoration(
                 color: Colors.purple, borderRadius: BorderRadius.circular(10)),
-            child: Center(
+            child: const Center(
                 child: Text(
               "Pay Now",
               style: TextStyle(color: Colors.white, fontSize: 20),

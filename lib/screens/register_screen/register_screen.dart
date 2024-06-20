@@ -1,28 +1,29 @@
-import 'package:car_wash/controller/app_controller/app_controller.dart';
 import 'package:car_wash/controller/register_controller/register_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 class RegisterScreen extends GetWidget<RegisterController> {
+  const RegisterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register")),
+      appBar: AppBar(title: const Text("Register")),
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Form(
           key: controller.formKey,
           child: Column(
             children: [
               TextFormField(
                 controller: controller.nameController,
-                decoration: InputDecoration(labelText: "Name"),
+                decoration: const InputDecoration(labelText: "Name"),
                 validator: controller.validateName,
               ),
               TextFormField(
                 controller: controller.emailController,
-                decoration: InputDecoration(labelText: "Email"),
+                decoration: const InputDecoration(labelText: "Email"),
                 validator: controller.validateEmail,
               ),
               GetBuilder<RegisterController>(builder: (controller) {
@@ -64,12 +65,12 @@ class RegisterScreen extends GetWidget<RegisterController> {
                     obscureText: controller.showConfirmPassword,
                     validator: controller.validateConfirmPassword);
               }),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   controller.registerUser();
                 },
-                child: Text("Register"),
+                child: const Text("Register"),
               ),
             ],
           ),

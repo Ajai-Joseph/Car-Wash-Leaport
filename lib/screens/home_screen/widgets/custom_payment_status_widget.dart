@@ -12,7 +12,7 @@ class CustomPaymentStatusWidget extends StatelessWidget {
               ? Colors.green.withOpacity(0.3)
               : Colors.red.withOpacity(0.3),
           borderRadius: BorderRadius.circular(5)),
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
       child: Text(
         isPaid ? 'Paid' : 'Not Paid',
         style: TextStyle(
