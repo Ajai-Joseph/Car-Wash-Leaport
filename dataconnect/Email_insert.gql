@@ -1,0 +1,10 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+	email_insert(data: {
+		fromUid: "1234 local" # String
+		sent: "2024-07-08" # Date
+		subject: "test local" # String
+		text: "test data body local" # String
+	})
+}

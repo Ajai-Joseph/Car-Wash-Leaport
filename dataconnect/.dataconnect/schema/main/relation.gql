@@ -1,0 +1,6 @@
+extend type User {
+  """
+  ✨ List Email entries in a one-to-many relationship with this object (i.e. where `Email.from` equals this object).
+  """
+  emails_on_from(where: Email_Filter, orderBy: [Email_Order!], limit: Int = 100): [Email!]!
+}

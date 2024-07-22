@@ -1,0 +1,4 @@
+extend type Email {
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Email", purpose: IMPLICIT_KEY_FIELD)
+  fromUid: String! @fdc_generated(from: "Email.from", purpose: IMPLICIT_REF_FIELD)
+}

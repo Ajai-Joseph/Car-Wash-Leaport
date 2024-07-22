@@ -1,0 +1,50 @@
+extend type Mutation {
+  """
+  Insert a single Email into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  email_insert(data: Email_Data!): Email_Key!
+  """
+  Insert a single User into the table. Columns not specified in `data` will receive defaults (e.g. `null`).
+  """
+  user_insert(data: User_Data!): User_Key!
+  """
+  Insert or update a single Email into the table, based on the primary key. Returns the key of the newly inserted Email.
+  """
+  email_upsert(data: Email_Data!): Email_Key!
+  """
+  Insert or update a single User into the table, based on the primary key. Returns the key of the newly inserted User.
+  """
+  user_upsert(data: User_Data!): User_Key!
+  """
+  Update a single Email based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  email_update(id: UUID, key: Email_Key, data: Email_Data!): Email_Key
+  """
+  Update a single User based on `id` or `key`, setting columns specified in `data`. Returns `null` if not found.
+  """
+  user_update(key: User_Key, data: User_Data!): User_Key
+  """
+  Update Email entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  email_updateMany(where: Email_Filter, all: Boolean = false, data: Email_Data!): Int!
+  """
+  Update User entries matching `where` conditions (or `all`, if true) according to `data`. Returns the number of rows updated.
+  """
+  user_updateMany(where: User_Filter, all: Boolean = false, data: User_Data!): Int!
+  """
+  Delete a single Email based on `id` or `key` and return its key (or `null` if not found).
+  """
+  email_delete(id: UUID, key: Email_Key): Email_Key
+  """
+  Delete a single User based on `id` or `key` and return its key (or `null` if not found).
+  """
+  user_delete(key: User_Key): User_Key
+  """
+  Delete Email entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  email_deleteMany(where: Email_Filter, all: Boolean = false): Int!
+  """
+  Delete User entries matching `where` conditions (or `all`, if true). Returns the number of rows deleted.
+  """
+  user_deleteMany(where: User_Filter, all: Boolean = false): Int!
+}

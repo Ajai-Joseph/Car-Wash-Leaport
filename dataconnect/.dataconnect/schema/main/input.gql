@@ -1,0 +1,64 @@
+scalar Email_Key
+scalar User_Key
+input Email_Data {
+  id: UUID
+  id_expr: UUID_Expr
+  fromUid: String
+  fromUid_expr: String_Expr
+  from: User_Key
+  sent: Date
+  sent_date: Date_Relative
+  sent_expr: Date_Expr
+  subject: String
+  subject_expr: String_Expr
+  text: String
+  text_expr: String_Expr
+}
+input Email_Filter {
+  _and: [Email_Filter!]
+  _not: Email_Filter
+  _or: [Email_Filter!]
+  id: UUID_Filter
+  fromUid: String_Filter
+  from: User_Filter
+  sent: Date_Filter
+  subject: String_Filter
+  text: String_Filter
+}
+input Email_ListFilter {
+  count: Int_Filter
+  exist: Email_Filter
+}
+input Email_Order {
+  id: OrderDirection
+  fromUid: OrderDirection
+  sent: OrderDirection
+  subject: OrderDirection
+  text: OrderDirection
+}
+input User_Data {
+  uid: String
+  uid_expr: String_Expr
+  address: String
+  address_expr: String_Expr
+  name: String
+  name_expr: String_Expr
+}
+input User_Filter {
+  _and: [User_Filter!]
+  _not: User_Filter
+  _or: [User_Filter!]
+  uid: String_Filter
+  address: String_Filter
+  name: String_Filter
+  emails_on_from: Email_ListFilter
+}
+input User_ListFilter {
+  count: Int_Filter
+  exist: User_Filter
+}
+input User_Order {
+  uid: OrderDirection
+  address: OrderDirection
+  name: OrderDirection
+}
